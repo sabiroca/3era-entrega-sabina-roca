@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Explorar destinos</title>
+</head>
+<body>
+       <!-- Header -->
+       <header class="menu">
+        <div class="contenedor-logo"> 
+            <img src="logo prisma.jpeg" alt="Logo" class="logo">
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburguesa">&#9776;</label>
+        <nav class="items-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Explorar destinos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>    
+     <!-- Destacados -->
+     <section class="destacados">
+        <section class="descripcion">
+            <h2 class="Titulos">Destinos más populares</h2>
+        </section>
+        <section class="biomas">
+            <!-- Radio buttons invisibles -->
+            <div class="radio-contenedor">
+                <input type="radio" id="playa" name="destino" checked>
+                <label for="playa" class="selector-destino">
+                    <i class="material-icons">beach_access</i><br>
+                    <span class="label">Playa</span>
+                </label>
+            </div>
+            <div class="radio-contenedor">
+                <input type="radio" id="ciudad" name="destino">
+                <label for="ciudad" class="selector-destino">
+                    <i class="material-icons">location_city</i><br>
+                    <span class="label">Ciudad</span>
+                </label>
+            </div>
+            <div class="radio-contenedor">
+                <input type="radio" id="montaña" name="destino">
+                <label for="montaña" class="selector-destino">
+                    <i class="material-icons">terrain</i><br>
+                    <span class="label">Montaña</span>
+                </label>
+            </div>
+            <div class="radio-contenedor">
+                <input type="radio" id="aventura" name="destino">
+                <label for="aventura" class="selector-destino">
+                    <i class="material-icons">hiking</i><br>
+                    <span class="label">Aventuras Naturales</span>
+                </label>
+            </div>
+            <div class="radio-contenedor">
+                <input type="radio" id="historico" name="destino">
+                <label for="historico" class="selector-destino">
+                    <i class="material-icons">account_balance</i><br>
+                    <span class="label">Lugares históricos</span>
+                </label>
+            </div>
+        </section>
+        <!-- Lista de destinos -->
+        <section class="lista-destinos">
+            <!-- cards contenedor -->
+            <div class="destinos-contenedor">
+                <!-- cards playa -->
+                <div class="destino-card">
+                    <img src="hotel1.jpg" alt="Destino1">
+                    <div class="datos-destino">
+                        <h3>Nombre del destino</h3>
+                        <p>Ubicacion</p>
+                    </div>
+                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                </div>
+    
+                <div class="destino-card">
+                    <img src="hotel2.jpg" alt="Destino2">
+                    <div class="datos-destino">
+                        <h3>Nombre del destino</h3>
+                        <p>Ubicacion</p>
+                    </div>
+                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                </div>
+    
+                <div class="destino-card">
+                    <img src="hotel3.jpg" alt="Destino3">
+                    <div class="datos-destino">
+                        <h3>Nombre del destino</h3>
+                        <p>Ubicacion</p>
+                    </div>
+                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>

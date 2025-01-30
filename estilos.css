@@ -1,0 +1,473 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+nav{
+    font-size: 24px;
+}
+/* tipografias */
+h1{
+    font-size: 44px;
+}
+h2 {
+font-size: 32px;
+}
+.Titulos{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.subtitulo{
+    text-align: center;
+    margin-bottom: 30px;
+}
+h3{
+    font-size: 24px;
+}
+p{
+    font-size: 22px;
+}
+span.label {
+    font-weight: bold;
+    font-size: 20px;
+}
+span{
+    font-size: 24px;
+}
+/* menu */
+.logo{
+    width: 125px;
+    height: auto;
+}
+.menu{
+    display: flex;
+    text-align: center;
+    background-color: blanchedalmond;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+}
+.items-menu ul{
+    display: flex;
+    list-style: none;
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+}
+.items-menu li{
+    margin: 0 15px;
+}
+.menu a{
+    font-size: 26px;
+    text-decoration: none;
+    color: black;
+    padding: 10 15px;
+    display: block;
+}
+.menu a:hover{
+    color: blue;
+}
+.menu-toggle {
+    display: none;
+}
+
+.hamburguesa {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+@media screen and (max-width: 768px){
+
+    .hamburguesa {
+        display: block;
+    }
+}
+    .items-menu {
+        display: none;
+        flex-direction: column;
+        background-color: aquamarine;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .menu-toggle:checked + .hamburguesa + .items-menu {
+        display: flex; 
+    }
+
+    .items-menu ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .items-menu li {
+        margin: 10px 0;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+@media screen and (min-width: 769px){
+    .items-menu{
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .items-menu ul{
+        flex-direction: row;
+    }
+
+    .items-menu li{
+        margin: 0 15px; 
+    }
+
+    .hamburguesa{
+        display: none;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+}
+/* boton */
+.boton{
+    background-color: blue;
+    color: antiquewhite;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+}
+.boton:hover{
+    box-shadow: 0 0 10px 5px rgba(106, 90, 205, 0.5);
+}
+.boton:active{
+    background-color: rgb(3, 3, 145);
+}
+/* seccion 1 intro */
+.contenedor-intro{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.textos{
+    max-width: 50%;
+    flex: 1;
+    text-align: left;
+}
+.textos h1{
+    margin-bottom: 15px;
+}
+.textos p{
+    margin-bottom: 30px;
+    text-align: left;
+}
+.imagen-principal{
+    max-width: 50%;
+    flex: 1;
+}
+.imagen-principal img{
+    width: 100%;
+    max-height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+@media screen and (max-width:768px){
+    .contenedor-intro{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .textos{
+        max-width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .textos p{
+        text-align: center;
+    }
+    .imagen-principal{
+        max-width: 100%;
+    }
+    .imagen-principal img{
+        max-height: none;
+    }
+}
+/* Destinos populares */
+.destacados{
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 40vh;
+}
+.selector-destino{
+    align-items: center;
+    text-align: center;
+    color: #979696;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.selector-destino:hover{
+    color: blueviolet;
+}
+input[type="radio"]:checked + label.selector-destino {
+    color: blue;
+}
+input[type="radio"] {
+    display: none;
+}
+.destinos-contenedor{
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    box-sizing: border-box;;
+}
+#playa:checked ~ .destinos-contenedor, 
+#ciudad:checked ~ .destinos-contenedor,
+#montaña:checked ~ .destinos-contenedor,
+#aventura:checked ~ .destinos-contenedor,
+#historico:checked ~ .destinos-contenedor{
+    opacity: 1;
+    transition: opacity .8s ease;
+    z-index: 100;
+    display: grid;
+}
+.radio-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descripcion h2{
+    margin-bottom: 20px;
+}
+.destino-card{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.destino-card h3{
+    margin-bottom: 8px;
+}
+.destino-card p{
+    margin-bottom: 15px;
+}
+.destino-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.lista-biomas{
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+@media (max-width:768px){
+    .destinos-contenedor{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .biomas{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(70px, 1fr));
+        gap: 5px;
+        text-align: center;
+    }
+}
+/* amenities */
+.amenities{
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.contenedor-amenities{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+    justify-items: center;
+}
+.amenitie{
+    color: #333;
+    text-align: center;
+}
+.amenitie i{
+    font-size: 32px;
+    margin-bottom: 5px;
+    display: block;
+}
+/* contacto */
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+.contacto{
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+    box-sizing: border-box;
+}
+.fila{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.columna{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.form label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input,textarea{
+    border: 1px solid #000;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+input:focus,textarea:focus{
+    border-color: blue;
+}
+.form .boton{
+    width: auto;
+    padding: 10px 20px;
+}
+/* footer */
+footer{
+    background-color: black;
+    color: antiquewhite;
+}
+/* detalle hotel */
+.titular{
+    background-color: rgb(214, 214, 214);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.contenedor-info{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding: 20px
+}
+.slider-hotel{
+    width: 60%;
+    padding-right: 25px;
+}
+.slider-hotel img{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+   border-radius: 10px;
+}
+.info-hotel{
+    width: 100%;
+    padding-left: 25px;
+}
+/* facturacion */
+.contenedor-info-reserva{
+    display: flex;
+    gap: 5px;
+    align-items: stretch;
+    padding: 20px;
+}
+.info-hotel-reserva{
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.datos-hotel-reserva{
+    margin-top: 20px;
+}
+.nombre-habitacion{
+    display: flex;
+    justify-content: space-between;
+}
+.datos-reserva{
+    margin-bottom: 20px;
+}
+.cant-noches{
+    display: flex;
+    justify-content: space-between;
+}
+.cant-huespedes{
+    display: flex;
+    justify-content: space-between;
+}
+.politicas h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.politicas{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.cancelacion-reembolsos{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.checkin-checkout{
+    padding-bottom: 20px;
+}
+.convivencia{
+    padding-bottom: 20px;
+}
+.facturacion{
+    padding-top: 20px;
+}
+.contenedor-terminos{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.contenedor-terminos label{
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;
+}
+.contenedor-terminos input{
+    margin: 0;
+    padding: 0;
+    width: 16px;
+}

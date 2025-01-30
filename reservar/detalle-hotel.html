@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Reservar</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="menu">
+        <div class="contenedor-logo"> 
+            <img src="logo prisma.jpeg" alt="Logo" class="logo">
+        </div>
+        <nav class="items-menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Explorar-destinos.html">Explorar destinos</a></li>
+                <li><a href="../Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>     
+  <!-- titular -->
+    <div class="titular">
+        <button class="back" onclick="history.back"><i class="material-icons">arrow_back</i></button>
+        <span class="titulo-barra">Reservar</span>
+    </div>
+ <!-- info hotel -->
+  <section class="contenedor-info">
+    <section class="slider-hotel">
+        <img src="hotel.jpg" alt="hotel">
+    </section>
+    <section class="info-hotel">
+        <h1>Nombre del hotel</h1>
+        <p>Ubicación</p>
+        <div class="selector-fecha">
+            <label for="checkin">Check-in:</label>
+            <input type="date" id="checkin">
+            <label for="checkout">Check-out:</label>
+            <input type="date" id="checkout">
+        </div>
+        <div class="selector-huespedes">
+            <label for="huespedes">Huéspedes:</label>
+            <input type="number" name="huespedes" id="huespedes">
+        </div>
+        <button class="boton">Reservar</button>
+    </section>
+  </section>
+    
+<!-- amenities -->
+        <section class="amenities">
+            <h2 class="Titulos">Amenities</h2>
+            <p class="subtitulo">Las comodidades que ofrece el hotel</p>
+            <section class="contenedor-amenities">
+                <div class="amenitie">
+                    <i class="material-icons">wifi</i>
+                    <span>Wifi Gratuito</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">hot_tub</i>
+                    <span>Spa y Piscinas</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">room_service</i>
+                    <span>Servicio a la habitacion</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">brunch_dining</i>
+                    <span>Desayuno Incluido</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">business_center</i>
+                    <span>Espacio de Coworking</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">nature_people</i>
+                    <span>Rooftop y jardines al aire libre</span>
+                </div>
+            </section>
+        </section>
+<!-- mapa -->
+<section class="ubicacion-hotel">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26860.761156512053!2d-71.97449029086046!3d-13.522907157475577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd6757452a689%3A0xfcb1dad8fccf1427!2sPrisma%20Hotel!5e0!3m2!1ses-419!2sar!4v1734633259536!5m2!1ses-419!2sar" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+<!-- footer -->
+<footer>
+    <div id="logo">
+        <img src="logo prisma.jpeg" alt="logo">
+    </div>
+    <div id="Ubicaciones"> <h3>Ubicaciones</h3> <br>
+        <span>Ubicacion1</span><br>
+        <span>Ubicacion2</span>
+    </div>
+    <div id="Reservas"> <h3>Reservas</h3> <br>
+        <span>11 52624578</span><br>
+        <span>example@gmail.com</span>
+    </div>
+</footer>
+</body>
+</html>

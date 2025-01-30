@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Facturación</title>
+</head>
+<body>
+    <!-- titular -->
+    <div class="titular">
+        <button class="back" onclick="history.back"><i class="material-icons">arrow_back</i></button>
+        <span class="titulo-barra">Reservar</span>
+    </div>
+ <!-- info reserva -->
+ <section class="contenedor-info-reserva">
+    <section class="slider-hotel">
+        <img src="/fotos/hotel1ciudad.jpg" alt="hotel">
+    </section>
+    <section class="info-hotel-reserva">
+        <div class="datos-hotel-reserva">
+            <div class="nombre-habitacion">
+                <p>Nombre del hotel</p>
+                <p>Habitacion</p>
+            </div>
+            <div class="ubicacion-hotel-reserva">
+                <p>Ubicacion</p>
+            </div>
+        </div>
+        <div class="datos-reserva">
+            <div class="cant-noches">
+                <p>Tarifa por 10 noches</p>
+                <p>$120.000</p>
+            </div>
+            <div class="cant-huespedes">
+                <p>Huéspedes</p>
+                <p>2 adultos</p>
+            </div>
+        </div>
+    </section>
+  </section>
+  <section class="politicas">
+    <div class="cancelacion-reembolsos">
+        <h2>Políticas de cancelación y reembolsos</h2>
+        <p><strong>Cancelación y modificación gratuita</strong><br>Hasta 72 horas antes de la fecha de Check-in</p>
+        <p><strong>Penalización</strong><br>Si la cancelación se realiza dentro de las 48 horas previas al check-in, se cobrabrá un porcentahe del monto total.</p>
+        <p><strong>No show</strong><br>Si el huésped no se presenta, no se realizará el reembolso del monto abonado.</p>
+    </div>
+    <div class="checkin-checkout">
+        <h3>Check-in y Check-out</h3>
+        <p><strong>Horario de check-in</strong><br>A partir de las 12:00am.</p>
+        <p><strong>Horario de check-out</strong><br>Hasta las 18:00hs.</p>
+        <p><strong>Late check-out</strong><br>Tiene costo adicional.</p>
+    </div>
+    <div class="convivencia">
+        <h3>Convivencia y responsabilidad del hotel</h3>
+        <p><strong>Objetos de valor</strong><br>El hotel no se hace responsable por objetos de valor no guardados en la caja fuerte de la habitación.</p>
+        <p><strong>Fumadores</strong><br>Todas las habitaciones son libres de humo. Se aplicará un cargo adicional si esta política no se cumple.</p>
+        <p><strong>Servicios garantizados</strong><br>Si el hotel no puede cumplir con la reserva por motivos ajenos al huesped, se reembolsará el total o se ofrecerá una alternativa similar.</p>
+    </div>
+  </section>
+      <!-- facturacion -->
+<section class="facturacion">
+    <h2 class="Titulos">Facturación</h2>
+    <form class="form">
+      <div class="fila">
+          <div class="columna">
+              <label for="numero-tarjeta">Número de tarjeta:</label>
+              <input type="text" name="numero-tarjeta" placeholder="Número de tarjeta"><br>
+          </div>
+          <div class="columna">
+              <label for="nombre-apellido">Nombre y apellido:</label>
+              <input type="text" name="nombre-apellido" placeholder="Nombre y apellido"><br>
+          </div>
+      </div>
+      <div class="fila">
+        <div class="columna">
+            <label for="fecha-vencimiento">Fecha de vencimiento:</label>
+            <input type="text" name="fecha-vencimiento" placeholder="Fecha de vencimiento"><br>
+        </div>
+        <div class="columna">
+            <label for="codigo-seguridad">Código de seguridad:</label>
+            <input type="text" name="codigo-seguridad" placeholder="CVV"><br>
+        </div>
+    </div>
+    <div class="fila">
+        <div class="columna">
+            <label for="dni">DNI del titular:</label>
+            <input type="text" name="dni" placeholder="DNI del titular"><br>
+        </div>
+        <div class="columna">
+            <label for="email">Email:</label>
+            <input type="text" name="email" placeholder="example@gmail.com"><br>
+        </div>
+    </div>
+    <div class="contenedor-terminos">
+        <input type="checkbox" id="terminos">
+        <label for="terminos">Acepto los términos y condiciones</label>
+    </div>
+      <button type="submit" class="boton">Reservar</button>
+    </form>
+</section>
+</body>
+</html>

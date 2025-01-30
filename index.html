@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Prisma Hotel</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="menu">
+        <div class="contenedor-logo"> 
+            <img src="logo prisma.jpeg" alt="Logo" class="logo">
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburguesa">&#9776;</label>
+        <nav class="items-menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="Explorar-destinos.html">Explorar destinos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <!-- Intro -->
+    <section class="contenedor-intro">
+        <section class="textos">
+            <h1>Explora el mundo, vive la experiencia Prisma</h1>
+            <p class="subtitulo">Llevamos la hospitalidad a cada rincón del planeta. Descubre nuestras exclusivas sucursales en destinos únicos, cuidadosamente seleccionados para ofrecerte experiencias inolvidables.</p>
+            <a href="Explorar-destinos.html" class="boton">Explorar destinos</a>
+        </section>       
+        <section class="imagen-principal">
+            <img src="fotos/hotel.jpg" alt="imagen del hotel">
+        </section>
+    </section>
+        <!-- Destacados -->
+    <section class="destacados">
+        <section class="descripcion">
+            <h2 class="Titulos">Destinos más populares</h2>
+        </section>
+        <section class="biomas">
+            <!-- Radio buttons invisibles -->
+            <div class="lista-biomas">
+                <!-- <div class="bioma-playa"> -->
+                    <div class="bioma-playa">
+                        <div class="radio-contenedor">
+                            <input type="radio" id="playa" name="destino" checked>
+                            <label for="playa" class="selector-destino">
+                                <i class="material-icons">beach_access</i><br>
+                                <span class="label">Playa</span>
+                            </label>
+                            <div class="destinos-contenedor">
+                                <div class="destino-card">
+                                    <img src="fotos/hotel1.jpg" alt="Destino1">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="fotos/hotel2.jpg" alt="Destino2">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="fotos/hotel3.jpg" alt="Destino3">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bioma-ciudad">
+                        <div class="radio-contenedor">
+                            <input type="radio" id="ciudad" name="destino">
+                            <label for="ciudad" class="selector-destino">
+                                <i class="material-icons">location_city</i><br>
+                                <span class="label">Ciudad</span>
+                            </label>
+                            <div class="destinos-contenedor">
+                                <div class="destino-card">
+                                    <img src="fotos/hotel1ciudad.jpg" alt="Destino1">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="fotos/hotel2ciudad.jpg" alt="Destino2">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="fotos/hotel3ciudad.jpg" alt="Destino3">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bioma-montaña">
+                        <div class="radio-contenedor">
+                            <input type="radio" id="montaña" name="destino">
+                            <label for="montaña" class="selector-destino">
+                                <i class="material-icons">terrain</i><br>
+                                <span class="label">Montaña</span>
+                            </label>
+                            <div class="destinos-contenedor">
+                                <div class="destino-card">
+                                    <img src="hotel1.jpg" alt="Destino1">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="hotel2.jpg" alt="Destino2">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="hotel3.jpg" alt="Destino3">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bioma-aventura">
+                        <div class="radio-contenedor">
+                            <input type="radio" id="aventura" name="destino">
+                            <label for="aventura" class="selector-destino">
+                                <i class="material-icons">hiking</i><br>
+                                <span class="label">Aventuras Naturales</span>
+                            </label>
+                            <div class="destinos-contenedor">
+                                <div class="destino-card">
+                                    <img src="hotel1.jpg" alt="Destino1">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="hotel2.jpg" alt="Destino2">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="hotel3.jpg" alt="Destino3">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bioma-historico">
+                        <div class="radio-contenedor">
+                            <input type="radio" id="historico" name="destino">
+                            <label for="historico" class="selector-destino">
+                                <i class="material-icons">account_balance</i><br>
+                                <span class="label">Lugares históricos</span>
+                            </label>
+                            <div class="destinos-contenedor">
+                                <div class="destino-card">
+                                    <img src="hotel1.jpg" alt="Destino1">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="hotel2.jpg" alt="Destino2">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                                <div class="destino-card">
+                                    <img src="hotel3.jpg" alt="Destino3">
+                                    <div class="datos-destino">
+                                        <h3>Nombre del destino</h3>
+                                        <p>Ubicacion</p>
+                                    </div>
+                                    <a href="reservar/detalle-hotel.html" class="boton">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </section>
+       <!-- amenities -->
+        <section class="amenities">
+            <h2 class="Titulos">Amenities</h2>
+            <p class="subtitulo">Las comodidades que ofrece el hotel</p>
+            <section class="contenedor-amenities">
+                <div class="amenitie">
+                    <i class="material-icons">wifi</i>
+                    <span>Wifi Gratuito</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">hot_tub</i>
+                    <span>Spa y Piscinas</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">room_service</i>
+                    <span>Servicio a la habitacion</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">brunch_dining</i>
+                    <span>Desayuno Incluido</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">business_center</i>
+                    <span>Espacio de Coworking</span>
+                </div>
+                <div class="amenitie">
+                    <i class="material-icons">nature_people</i>
+                    <span>Rooftop y jardines al aire libre</span>
+                </div>
+            </section>
+        </section>
+        <section class="Contacto">
+             <!-- contacto -->
+              <h2 class="Titulos">Contacto</h2>
+              <form class="form">
+                <div class="fila">
+                    <div class="columna">
+                        <label for="Nombre">Nombre:</label>
+                        <input type="text" name="Nombre" placeholder="Nombre"><br>
+                    </div>
+                    <div class="columna">
+                        <label for="Apellido">Apellido:</label>
+                        <input type="text" name="Apellido" placeholder="Apellido"><br>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="columna">
+                      <label for="Email">Email:</label>
+                      <input type="email" name="Email" placeholder="example@gmail.com"><br>
+                    </div>
+                  </div>
+                  <div class="fila">
+                    <div class="columna">
+                      <label for="Consulta">Consulta:</label>
+                      <textarea name="Consulta" placeholder="Consulta" id=""></textarea><br>
+                    </div>
+                  </div>
+                <button type="submit" class="boton">Enviar</button>
+              </form>
+        </section>
+        <footer>
+            <!-- footer -->
+            <div id="logo">
+                <img src="logo prisma.jpeg" alt="logo">
+            </div>
+            <div id="Ubicaciones"> <h3>Ubicaciones</h3> <br>
+                <span>Ubicacion1</span><br>
+                <span>Ubicacion2</span>
+            </div>
+            <div id="Reservas"> <h3>Reservas</h3> <br>
+                <span>11 52624578</span><br>
+                <span>example@gmail.com</span>
+            </div>
+        </footer>
+</body>
+</html>
