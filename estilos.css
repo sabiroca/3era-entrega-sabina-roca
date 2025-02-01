@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* variables*/
 * {
   padding: 0px;
   margin: 0px;
@@ -162,7 +163,7 @@ span {
 }
 
 .boton:hover {
-  box-shadow: 0 0 10px 5px rgba(106, 90, 205, 0.5);
+  box-shadow: 0 0 10px 5px blueviolet;
 }
 
 .boton:active {
@@ -254,24 +255,30 @@ input[type=radio] {
   display: none;
 }
 
-.destinos-contenedor {
-  display: none;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  width: 100%;
-  gap: 5px;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  opacity: 0;
+  position: absolute;
   box-sizing: border-box;
 }
 
-#playa:checked ~ .destinos-contenedor,
-#ciudad:checked ~ .destinos-contenedor,
-#montaña:checked ~ .destinos-contenedor,
-#aventura:checked ~ .destinos-contenedor,
-#historico:checked ~ .destinos-contenedor {
-  opacity: 1;
+.biomas {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#playa:checked ~ .cards-playa,
+#ciudad:checked ~ .cards-ciudad,
+#montaña:checked ~ .cards-montaña,
+#aventura:checked ~ .cards-naturales,
+#historico:checked ~ .cards-historico {
+  opacity: 100;
   transition: opacity 0.8s ease;
   z-index: 100;
-  display: grid;
+  position: static;
 }
 
 .radio-contenedor {
@@ -294,6 +301,7 @@ input[type=radio] {
   border-radius: 15px;
   overflow: hidden;
   box-sizing: border-box;
+  flex-grow: 1;
 }
 
 .destino-card h3 {
@@ -310,15 +318,6 @@ input[type=radio] {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
-}
-
-.lista-biomas {
-  display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-  gap: 5px;
-  text-align: center;
-  margin-bottom: 15px;
 }
 
 @media (max-width: 768px) {
@@ -465,6 +464,8 @@ footer {
   gap: 5px;
   align-items: stretch;
   padding: 20px;
+  height: auto;
+  border: solid 1px black;
 }
 
 .info-hotel-reserva {
@@ -477,6 +478,10 @@ footer {
 
 .datos-hotel-reserva {
   margin-top: 20px;
+}
+
+.nombre-habitacion p {
+  font-size: 35px;
 }
 
 .nombre-habitacion {
@@ -527,7 +532,7 @@ footer {
 
 .contenedor-terminos {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -541,6 +546,142 @@ footer {
   margin: 0;
   padding: 0;
   width: 16px;
+}
+
+.carousel {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+  max-width: 30%;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-height: 300px;
+  height: 100%;
+}
+
+.carousel-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
+
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgb(255, 255, 255);
+  font-family: "Open Sans", sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-info-reserva {
+    flex-direction: column;
+  }
+  .carousel {
+    max-width: 100%;
+  }
+  .carousel-item {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
